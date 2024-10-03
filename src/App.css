@@ -1,42 +1,60 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0; 
+  background: #2B2B2B;
+  ;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-container {
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: space-around; /* Espacia los elementos */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner {
+  width: 500px; /* Ancho fijo de la imagen */
+  height: 645px; /* Alto fijo de la imagen */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el texto verticalmente */
+  align-items: flex-start; /* Alinea el texto a la izquierda */
+  color: white; /* Color del texto */
+  margin-left: 80px; /* Margen izquierdo para el contenedor de texto */
 }
 
-.card {
-  padding: 2em;
+.title {
+  font-size: 3rem; /* Tamaño de fuente grande */
+  margin: 0 0 10px; /* Margen inferior */
 }
 
-.read-the-docs {
-  color: #888;
+.description {
+  font-size: 1.25rem; /* Tamaño de fuente intermedio */
+  margin: 0 0 20px; /* Margen inferior */
+}
+
+.button-group {
+  display: flex; /* Cambiar a columna */
+  flex-direction: column; /* Colocar botones uno debajo del otro */
+}
+
+.random-button, .specific-button {
+  border: 1px solid #A259FF; /* Borde violeta */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #3B3B3B; /* Color de fondo gris */
+  color: white; /* Texto en blanco */
+  font-family: 'Work Sans', sans-serif; /* Misma fuente que el texto */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  margin-bottom: 10px; /* Espacio entre botones */
+  transition: background-color 0.3s, border-color 0.3s; /* Transición para el color de fondo y borde */
+}
+
+.random-button:hover, .specific-button:hover {
+  background-color: #5a6268; /* Color más oscuro al pasar el mouse */
 }

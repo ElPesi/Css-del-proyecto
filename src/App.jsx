@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css'; 
+import Banner from './assets/marcos.jpg';
+import Footer from './components/footer';
+// Importar Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Componente de Font Awesome
+import { faRandom, faSearch } from '@fortawesome/free-solid-svg-icons'; // Importar iconos específicos
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app-container"> {/* Contenedor principal de la aplicación */}
+      <img src={Banner} alt="Banner" className="banner" /> {/* Banner de la aplicación */}
+      <div className="text-container"> {/* Contenedor para el texto */}
+        <h1 className="title">Categorias</h1> {/* Título principal */}
+        <p className="description">Aquí puedes explorar diferentes categorías.</p> {/* Descripción */}
+        <div className="button-group"> {/* Contenedor para los botones */}
+          {/* Botón Aleatorio con icono */}
+          <button className="random-button">
+            <FontAwesomeIcon icon={faRandom} /> Aleatoria {/* El icono se añade aquí */}
+          </button>
+          {/* Botón Específico con icono */}
+          <button className="specific-button">
+            <FontAwesomeIcon icon={faSearch} /> Específica {/* El icono se añade aquí */}
+          </button>
+        </div>
+        <Footer /> {Footer}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App; 
