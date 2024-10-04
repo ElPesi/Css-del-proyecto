@@ -1,42 +1,104 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/*en la parte d no sabes que pelicula ver, poner el grid y que todo eso este envuelto en una sola clase o id particular*/
+.iniciaDescubrimiento {
+  text-align: center;  
+  display:block;
+  padding: 10px;  
+  background-color: #540D53; 
+}
+.iniciaDescubrimiento h2 {
+  font-size: 32px;      
+  color: #000000;       
+  padding-left: 30px;
+  margin-bottom: 20px;   
+}
+img{
+  max-width: 40%;      
+  display: flex;
+}
+#botonDescubrimiento{
+  background-color: #F5167E;
+  color: white;              
+  padding: 10px 20px;      
+  border: none;             
+  border-radius: 50px;      
+  transition: box-shadow 0.3s; 
+  box-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5), 
+    0 0 15px rgba(84, 13, 83, 0.7); 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.paginaInicio{
+  background-image: url("./public/img/títuloPagInicio.svg"); 
+  background-size: cover;  
+  background-position: center;  
+  height: 400px;  
+  width: 100%;  
   }
-  to {
-    transform: rotate(360deg);
+
+:root{
+  background-color:  #3e3d3d;
+}
+.paginaInicio h1 {
+  color:#BA306A;
+  font-size: 96px;
+}
+.paginaInicio p{
+  color: white; 
+  font-size: 32px;
+
+}
+#flecha0{
+  position: absolute;
+  top: 255px; 
+  left: 50%;
+}
+p.flechas{
+  font-size: 32px;
+  border-color: #c22366;
+  color: #3e3d3d;
+  text-shadow: 
+    -1px -1px 0 #c22366, 
+    1px -1px 0 #c22366, 
+    -1px  1px 0 #c22366, 
+    1px  1px 0 #c22366; 
+  
   }
+.categoriasDeterminadas{
+  padding: 3px 50px;
+  display: flex;
+  gap: 12px;
+  align-items: baseline ; /* Puedes reemplazar 'stretch' por cualquier otro valor */}
+#flecha1{
+  top: 87%;
+  left: 0%;
+  display: flex;
+  padding: 3px 50px;
+  position: absolute;
+  transform: rotate(90deg);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#flecha2{
+  top: 87%;
+  left: 90%;
+  padding: 3px 50px;
+  position: absolute;
+  transform: rotate(270deg);
 }
+/*.categoriasDeterminadas#flecha1{
+  position: absolute;
+  
+  display: block;
 
-.card {
-  padding: 2em;
 }
-
-.read-the-docs {
-  color: #888;
+.categoriasDeterminadas#flecha2{
+  position: absolute;
+  top: 50%;
+  display: block;
+}*/
+.botonesCategInicio{
+  background-color: #3e3d3d;
+  color: #EF629D;
+  padding: 3px 50px;      
+  border:2px solid #EF629D;
+  border-radius: 8px;
+  margin: 62px;
 }

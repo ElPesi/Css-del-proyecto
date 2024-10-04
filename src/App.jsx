@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
+    <div className='paginaInicio'>
+      <h1>Título</h1>
+      <p>
         Click on the Vite and React logos to learn more
       </p>
-    </>
+      <p id='flecha0' className='flechas'>v</p>
+      <div className='iniciaDescubrimiento'>
+        <h2>¿No sabes qué película ver?</h2>
+        <button id='botonDescubrimiento'>Inicia Descubrimiento</button>
+        <img 
+          src="./public/img/pagInicio_descubrimiento.svg" 
+        />
+      </div>
+    <div className='categoriasDeterminadas'>
+        <p id='flecha1' className='flechas'>v</p>
+        <button id='botonCategTerror' className='botonesCategInicio'>Terror</button>
+        <button id='botonCategDrama'className='botonesCategInicio'>Drama</button>
+        <button id='botonCategRomance'className='botonesCategInicio'>Romance</button>
+        <button id='botonCategAccion'className='botonesCategInicio'>Acción</button>
+        <button id='botonCategCiencFiccion'className='botonesCategInicio'>Ciencia Ficción</button>
+        <p id='flecha2' className='flechas'>v</p>
+      </div>
+    </div>
   )
 }
 
