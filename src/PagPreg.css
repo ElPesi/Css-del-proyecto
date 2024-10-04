@@ -1,0 +1,108 @@
+/*fondo*/
+body {
+  background-color:#2B2B2B;
+  ;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: white; 
+}
+
+/*titulo*/
+.custom-title {
+  font-size: 48px; 
+}
+
+/*carta*/
+.movie-card {
+  position: relative;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie-content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.movie-description {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.movie-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.movie-author {
+  font-size: 14px;
+  color: lightgray;
+}
+
+/*grilla*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 20px; /* Espacio entre columnas */
+  padding: 20px;
+}
+
+h1, p {
+  margin: 0 0 20px;
+}
+
+.movie-card {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#3B3B3B;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.movie-content {
+  text-align: center;
+}
+
+.movie-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.movie-author {
+  font-size: 14px;
+  color: white;
+}
+
+/*boton*/
+.my-button {
+  font-size: 18px;
+  background-color:#A259FF;
+  color: white;
+}
+.my-button .icon {
+  margin-right: 10px; 
+  font-size: 20px; 
+}
