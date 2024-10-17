@@ -1,11 +1,11 @@
 /*en la parte d no sabes que pelicula ver, poner el grid y que todo eso este envuelto en una sola clase o id particular*/
-.iniciaDescubrimiento {
+.discoveryBegins {
   text-align: center;  
   display:block;
   padding: 10px;  
   background-color: #540D53; 
 }
-.iniciaDescubrimiento h2 {
+.discoveryBegins h2 {
   font-size: 32px;      
   color: #000000;       
   padding-left: 30px;
@@ -15,7 +15,7 @@ img{
   max-width: 40%;      
   display: flex;
 }
-#botonDescubrimiento{
+#discoveryButton{
   background-color: #F5167E;
   color: white;              
   padding: 10px 20px;      
@@ -27,8 +27,8 @@ img{
     0 0 15px rgba(84, 13, 83, 0.7); 
 }
 
-.paginaInicio{
-  background-image: url("./public/img/títuloPagInicio.svg"); 
+.homePage{
+  background-image: url("./public/img/títuloPagStart.svg"); 
   background-size: cover;  
   background-position: center;  
   height: 400px;  
@@ -38,21 +38,21 @@ img{
 :root{
   background-color:  #3e3d3d;
 }
-.paginaInicio h1 {
+.homePage h1 {
   color:#BA306A;
   font-size: 96px;
 }
-.paginaInicio p{
+.homePage p{
   color: white; 
   font-size: 32px;
 
 }
-#flecha0{
+#arrow0{
   position: absolute;
   top: 255px; 
   left: 50%;
 }
-p.flechas{
+p.arrows{
   font-size: 32px;
   border-color: #c22366;
   color: #3e3d3d;
@@ -63,12 +63,12 @@ p.flechas{
     1px  1px 0 #c22366; 
   
   }
-.categoriasDeterminadas{
+.certainCategories{
   padding: 3px 50px;
   display: flex;
   gap: 12px;
   align-items: baseline ; /* Puedes reemplazar 'stretch' por cualquier otro valor */}
-#flecha1{
+#arrow1{
   top: 96%;
   left: 0%;
   display: flex;
@@ -76,25 +76,25 @@ p.flechas{
   position: absolute;
   transform: rotate(90deg);
 }
-#flecha2{
+#arrow2{
   top: 96%;
   left: 90%;
   padding: 3px 50px;
   position: absolute;
   transform: rotate(270deg);
 }
-/*.categoriasDeterminadas#flecha1{
+/*.certainCategories#arrow1{
   position: absolute;
   
   display: block;
 
 }
-.categoriasDeterminadas#flecha2{
+.certainCategories#arrow2{
   position: absolute;
   top: 50%;
   display: block;
 }*/
-.botonesCategInicio{
+.buttonsCategStart{
   background-color: #3e3d3d;
   color: #EF629D;
   padding: 3px 50px;      
