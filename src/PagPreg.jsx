@@ -34,6 +34,12 @@ function PagPreg() {
             </div>
           </div>
         </center>
+        <center>
+          <button className="my-button">
+            <FontAwesomeIcon icon={faFilm} className="icon" />
+            Ver ahora
+          </button>
+        </center>
       </div>
       <center>
         <div className="movie-card">
