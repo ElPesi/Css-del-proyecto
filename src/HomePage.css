@@ -28,7 +28,7 @@ img{
 }
 
 .homePage{
-  background-image: url("./public/img/títuloPagStart.svg"); 
+  background-image: url("./public/img/homePageTitle.svg"); 
   background-size: cover;  
   background-position: center;  
   height: 400px;  
