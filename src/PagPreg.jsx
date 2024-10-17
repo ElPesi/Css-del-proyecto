@@ -4,6 +4,7 @@ import Footer from './components/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Componente de Font Awesome
 import { faRocket } from '@fortawesome/free-solid-svg-icons'; // Ícono de cohete
 import { faHeart } from '@fortawesome/free-solid-svg-icons'; // corazon
+import { faFilm } from '@fortawesome/free-solid-svg-icons'; // peli
 
 function PagPreg() {
   return (
