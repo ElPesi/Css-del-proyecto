@@ -28,7 +28,7 @@ img{
 }
 
 .homePage{
-  background-image: url("./public/img/homePageTitle.svg"); 
+  background-image: url("/img/home_dicovery.png"); 
   background-size: cover;  
   background-position: center;  
   height: 400px;  

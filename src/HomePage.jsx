@@ -1,5 +1,5 @@
 import './HomePage.css'
-
+import footer from './footer';
 function HomePage() {
   return (
     <div className='homePage'>
@@ -12,7 +12,7 @@ function HomePage() {
         <h2>¿No sabes qué película ver?</h2>
         <button id='discoveryButton'>Inicia Descubrimiento</button>
         <img 
-          src="./public/img/home_discoveryPage.svg" 
+          src="/img/homePageTitle.png" 
         />
       </div>
     <div className='certainCategories'>
@@ -24,6 +24,7 @@ function HomePage() {
         <button id='buttonCategScienceFiction'className='buttonsCategStart'>Science Fictión</button>
         <p id='arrow2' className='arrows'>v</p>
       </div>
+      <footer/>
     </div>
   )
 }
