@@ -172,3 +172,8 @@ h1 {
 .discover-button {
 	width: 100%;
 }
+.inline-image {
+	vertical-align: middle; /* Alinea la imagen con el centro del texto */
+	display: inline-block; /* Asegura que la imagen permanezca en la misma línea */
+  }
+  

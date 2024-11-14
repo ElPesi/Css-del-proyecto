@@ -33,7 +33,6 @@ const Trailer = ({ imdbId }) => {
     return (
         <>
             <div>
-                <p>Hola</p>
                 {trailerUrl ? (
                     <iframe
                         width="560"
