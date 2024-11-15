@@ -45,7 +45,7 @@ function Navbar() {
             <img id="logo" src={icon} ></img>
             <ul>
                 <li><a className='buttonNav' href="/">Home</a></li>
-                <li><a className='buttonNav' href="/Categorias">Genders</a></li>
+                <li><a className='buttonNav' href="/Categorias">Genres</a></li>
                 <li><a className='buttonNav' href="/Preguntas">Questions</a></li>
                 <li><a className='buttonNav' href="#">Favorites</a></li>
             </ul>
