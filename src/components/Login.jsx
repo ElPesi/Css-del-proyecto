@@ -1,63 +1,75 @@
-import { useState, React } from 'react';
-import './SingUpAndLogin.css'
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import { useState } from 'react';
+import './SingUpAndLogin.css';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { app } from './db';
-const auth = getAuth(app)
+import GoogleLogin from './GoogleLogin';
+
+const auth = getAuth(app);
 
 function Login(props) {
+  const [account, setAccount] = useState({
+    Gmail: '',
+    Password: ''
+  });
+  const [error, setError] = useState('');
 
-  const [Acount, SetAcount] = useState({
-    Gmail: "",
-    Password: ""
-  })
-  const [error, SetError] = useState("")
-  const Submit = (event) => {
-    event.preventDefault()
-    signInWithEmailAndPassword(auth, Acount.Gmail, Acount.Password)
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(auth, account.Gmail, account.Password)
       .then((userCredential) => {
-        props.send(userCredential["user"].uid)
+        props.send(userCredential.user.uid);
+        console.log(userCredential);
       })
       .catch(() => {
-        SetError("No se ha podido acceder a tu cuenta verifica la contraseña y el mail")
+        setError('No se ha podido acceder a tu cuenta. Verifica la contraseña y el correo.');
       });
+  };
 
-  }
-  const Handle = (event) => {
-    let name = event.target.name
-    let value = event.target.value
-    SetAcount({
-      ...Acount, [name]: value
-    })
-  }
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setAccount({
+      ...account,
+      [name]: value
+    });
+  };
+
   return (
     <>
       <div className="popup">
-
         <div>
-          <form onSubmit={Submit}>
+          <form onSubmit={handleSubmit}>
             <h5 className="error">{error}</h5>
-            <h3>Mail:</h3>
-            <input className={"SignupInputs"}
-              onChange={Handle}
-              name='Gmail'
-              type='email'
-            ></input>
+            <h3>Correo:</h3>
+            <input
+              className="SignupInputs"
+              onChange={handleChange}
+              name="Gmail"
+              type="email"
+              placeholder="Ingresa tu correo"
+            />
             <h3>Contraseña:</h3>
-            <input className={"SignupInputs"}
-              onChange={Handle}
-              name='Password'
-              type='password'
-            ></input>
-            <br></br>
-            <button className="SignupButton" type='Submit'><b>→</b> Sign Up</button>
-            <br></br>
-            <br></br>
+            <input
+              className="SignupInputs"
+              onChange={handleChange}
+              name="Password"
+              type="password"
+              placeholder="Ingresa tu contraseña"
+            />
+            <br />
+            <div style={{ display: "flex" }}>
+              <button className="SignupButton" type="submit">
+                <b>→</b> Iniciar Sesión
+              </button>
+              <GoogleLogin send={props.send} />
+              <br />
+            </div>
           </form>
+
         </div>
       </div>
     </>
   );
-};
-
+}
 
 export default Login;
