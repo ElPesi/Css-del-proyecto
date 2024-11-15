@@ -1,153 +1,69 @@
-/* Eliminar márgenes y padding globales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-:root {
-  background-color: #3e3d3d;
-}
-
 .discoveryBegins {
-  text-align: center;
-  display: block;
-  padding: 10px;
-  background-color: #540d53;
+	background-color: #540d53;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	border-radius: 10px;
+	margin-top: auto;
+}
+
+.leftSquare {
+	display: flexbox;
+	flex: 1;
 }
 
 .discoveryBegins h2 {
-  font-size: 2rem; /* Cambiado a rem para hacerlo relativo */
-  color: #000000;
-  padding-left: 2rem;
-  margin-bottom: 1.25rem;
+	font-size: 2rem;
+	color: #000000;
+	padding-left: 2rem;
+	margin-bottom: 1.25rem;
 }
 
 img {
-  max-width: 100%; /* Se adapta al 100% del ancho del contenedor */
-  height: auto;    /* Mantiene la proporción */
-  display: block;
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 #discoveryButton {
-  background-color: #f5167e;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  transition: box-shadow 0.3s;
-  box-shadow:
-    0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 15px rgba(84, 13, 83, 0.7);
+	background-color: #f5167e;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 50px;
+	transition: box-shadow 0.3s;
+	box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(84, 13, 83, 0.7);
 }
 
 .homePage {
-  background-image: url("/img/home_dicovery.png");
-  background-size: cover;
-  background-position: center;
-  height: 35vh; /* Usa el 100% de la altura de la ventana */
-  width: 100vw;  /* Usa el 100% del ancho de la ventana */
+	background-image: url("/img/home_dicovery.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .homePage h1 {
-  color: #ba306a;
-  font-size: 4rem; /* Cambiado a rem para hacerlo más responsive */
+	color: #ba306a;
+	font-size: 4rem;
 }
 
 .homePage p {
-  color: white;
-  font-size: 2rem; /* Cambiado a rem */
+	color: white;
+	font-size: 2rem;
 }
 
-#arrow0 {
-  position: relative;
-  top: 20px; /* Ajuste relativo */
-  left: 50%;
-  transform: translateX(-50%);
+.title {
+	font-family: Work Sans;
+  font-style: italic;
+  margin-top: 30vh;
+  padding-left: 40px;
 }
-
-p.arrows {
-  font-size: 2rem; /* Tamaño adaptado */
-  border-color: #c22366;
-  color: #3e3d3d;
-  text-shadow:
-    -1px -1px 0 #c22366,
-    1px -1px 0 #c22366,
-    -1px 1px 0 #c22366,
-    1px 1px 0 #c22366;
-}
-
-/* Sección de categorías adaptada */
-.certainCategories {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Espacia flechas y contenido */
-  margin: 20px 0; /* Espaciado alrededor del carrusel */
-  position: relative; /* Necesario para posicionar las flechas */
-}
-
-.categoryDisplay {
-  display: flex; /* Muestra las categorías en fila */
-  justify-content: center; /* Centra el contenido */
-  flex: 1; /* Permite que ocupe el espacio disponible */
-  min-width: 200px; /* Ancho mínimo para la categoría */
-  text-align: center;
-}
-
-.arrows {
-  cursor: pointer;
-  padding: 10px; /* Espaciado alrededor de las flechas */
-  font-size: 2rem; /* Tamaño de la fuente para las flechas */
-  color: #ef629d; /* Color para las flechas */
-  background: transparent; /* Sin fondo */
-  border: none; /* Sin borde */
-  position: absolute; /* Posición absoluta */
-  top: 50%; /* Centra verticalmente */
-  transform: translateY(-50%); /* Ajuste de la posición */
-}
-
-.arrows:first-of-type {
-  left: 10px; /* Espacio desde el borde izquierdo */
-}
-
-.arrows:last-of-type {
-  right: 10px; /* Espacio desde el borde derecho */
-}
-
-/* Botón de categoría */
-.buttonsCategStart {
-  background-color: #3e3d3d;
-  color: #ef629d;
-  padding: 3px 50px;
-  border: 2px solid #ef629d;
-  border-radius: 8px;
-  margin: 62px;
-}
-
-/* Media queries para pantallas pequeñas */
-@media (max-width: 768px) {
-  .homePage h1 {
-    font-size: 3rem; /* Tamaño más pequeño para pantallas pequeñas */
-  }
-
-  .homePage p {
-    font-size: 1.5rem; /* Tamaño más pequeño para pantallas pequeñas */
-  }
-
-  .certainCategories {
-    flex-direction: column; /* Coloca las flechas y el botón en columna */
-  }
-
-  #arrow0 {
-    top: 10px; /* Ajuste para pantallas más pequeñas */
-  }
-
-  .categoryDisplay {
-    flex-direction: column; /* Acomoda categorías en columna si es necesario */
-  }
+.paragraph{
+  font-family: Work Sans;
+  padding-left: 50px;
 }
