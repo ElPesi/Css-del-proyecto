@@ -15,6 +15,10 @@ function Descripcion() {
     return { hours: 1, minutes: 59 }; // Valor predeterminado
   };
 
+  const RottenTomatoes = () => {
+
+  }
+
   const duration = movie ? getDuration(movie.Runtime) : { hours: 1, minutes: 59 };
 
   return (
@@ -26,6 +30,7 @@ function Descripcion() {
           <img src="scale.jpg" alt="Película" className="header-image" />
         )}
       </div>
+      
       <div className="content-section">
         <div className="left-content">
           <h1 className="movieName">{movie ? movie.Title : "Nombre De La Película"}</h1>
@@ -40,10 +45,17 @@ function Descripcion() {
           </p>
           <div className="extra-details">
             <p><span className="detail-title">Extra details</span></p>
-            <p className="datailsStyle">👥  Actors: {movie ? movie.Actors : "Actores"}</p>
-            <p className="datailsStyle">🌍 Language: {movie ? movie.Language : "Idiomas"}</p>
-            <p className="datailsStyle">🎞️ Genre: {movie ? movie.Genre : "Genero"}</p>
-            <p className="datailsStyle">🍿 Ratings: {movie ? movie.Ratings[1].Source : "Source"} 🍅 {movie ? movie.Ratings[1].Value : "Porcentaje"}, Imdb ⭐ {movie ? movie.imdbRating : "Source"} </p>
+            <p className="datailsStyle">👥  Actors: {movie ? movie.Actors : ""}</p>
+            <p className="datailsStyle">🌍 Language: {movie ? movie.Language : ""}</p>
+            <p className="datailsStyle">🎞️ Genre: {movie ? movie.Genre : ""}</p>
+            {movie && movie.Ratings && movie.Ratings[1] ? (
+  <p className="datailsStyle">
+    🍿 Ratings: {movie.Ratings[1].Source}
+    <img src="./img/RottenTomatoes_Fresh.png" width="20" className="inline-image" />
+    {movie.Ratings[1].Value}, Imdb ⭐ {movie.imdbRating}
+  </p>
+) : "This information is not available"}
+
             <p className="datailsStyle">🏆 Awards: {movie ? movie.Awards : "Premios"}</p>
           </div>
         </div>
