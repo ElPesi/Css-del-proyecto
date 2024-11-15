@@ -15,8 +15,18 @@ function Descripcion() {
     return { hours: 1, minutes: 59 }; // Valor predeterminado
   };
 
-  const RottenTomatoes = () => {
-
+  const RottenTomatoes = (rating) => {
+    const percentage = parseInt(rating.replace("%",""), 10);
+    if(percentage<60){
+      return "./img/RottenTomatoes_Moco.png"
+    }
+    else if(percentage >= 60 && percentage < 75){
+      return "./img/RottenTomatoes_Tomate.png"
+    }
+    else if(percentage >= 75){
+      return "./img/RottenTomatoes_Fresh.png"
+    }
+    return null;
   }
 
   const duration = movie ? getDuration(movie.Runtime) : { hours: 1, minutes: 59 };
@@ -24,11 +34,15 @@ function Descripcion() {
   return (
     <div className="page-container">
       <div className="image-section">
+        <div></div>
+        <div>{movie && <Trailer imdbId={movie.imdbID}></Trailer>}</div>
+        <div>
         {movie && movie.Poster ? (
-          <img src={movie.Poster} alt={movie.Title} className="header-image" />
+          <img src={movie.Poster} alt={movie.Title} className="header-image" style={{ width: '230px', height: 'auto' }} />
         ) : (
           <img src="scale.jpg" alt="Película" className="header-image" />
         )}
+        </div>
       </div>
       
       <div className="content-section">
@@ -51,7 +65,8 @@ function Descripcion() {
             {movie && movie.Ratings && movie.Ratings[1] ? (
   <p className="datailsStyle">
     🍿 Ratings: {movie.Ratings[1].Source}
-    <img src="./img/RottenTomatoes_Fresh.png" width="20" className="inline-image" />
+    <img
+     src={RottenTomatoes(movie.Ratings[1].Value)} alt="Ratings RottenTomatoes" width="20" className="inline-image" />
     {movie.Ratings[1].Value}, Imdb ⭐ {movie.imdbRating}
   </p>
 ) : "This information is not available"}
@@ -70,7 +85,6 @@ function Descripcion() {
             </div>
           </div>
           <button className="discover-button">Discover More</button>
-          {movie && <Trailer imdbId={movie.imdbID}></Trailer>}
         </div>
       </div>
     </div>
