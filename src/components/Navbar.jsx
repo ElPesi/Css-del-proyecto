@@ -46,7 +46,6 @@ function Navbar() {
             <ul>
                 <li><a className='buttonNav' href="/">Home</a></li>
                 <li><a className='buttonNav' href="/Categorias">Genders</a></li>
-                <li><a className='buttonNav' href="/Descripcion">Description</a></li>
                 <li><a className='buttonNav' href="/Preguntas">Questions</a></li>
                 <li><a className='buttonNav' href="#">Favorites</a></li>
             </ul>
