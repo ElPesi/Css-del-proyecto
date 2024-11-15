@@ -42,21 +42,26 @@ function HomePage() {
 
 	return (
 		<div className="homePage">
-			<h1 className="title">Welcome</h1>
+			<h1 className="title" style={{ fontSize: "90px" }}>
+				Welcome
+			</h1>
+			<p className="paragraph" style={{ fontSize: "30px" }}>
+				On this page you can search for movies and find the perfect
+				movie for the moment.
+			</p>
 			<>
 				<div className="discoveryBegins">
 					<img src="/img/homePageTitle.png" alt="Home Page Title" />
 					<div className="leftSquare">
 						<center>
-
-            <h2>¿Don't know what movie to watch?</h2>
-						<button
-							id="discoveryButton"
-							onClick={handleButtonClick}
-              >
-							Start Discovery
-						</button>
-              </center>
+							<h2>¿Don't know what movie to watch?</h2>
+							<button
+								id="discoveryButton"
+								onClick={handleButtonClick}
+							>
+								Start Discovery
+							</button>
+						</center>
 					</div>
 				</div>
 			</>

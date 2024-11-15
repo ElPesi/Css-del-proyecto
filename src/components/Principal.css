@@ -1,63 +1,69 @@
-
-
 .discoveryBegins {
-  background-color: #540d53;
-  width: 100vw;  /* Usa el 100% del ancho de la ventana */
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  border-radius: 10px;
-
+	background-color: #540d53;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	border-radius: 10px;
+	margin-top: auto;
 }
 
-.leftSquare{
-  display: flexbox;
+.leftSquare {
+	display: flexbox;
+	flex: 1;
 }
 
 .discoveryBegins h2 {
-  font-size: 2rem; /* Cambiado a rem para hacerlo relativo */
-  color: #000000;
-  padding-left: 2rem;
-  margin-bottom: 1.25rem;
+	font-size: 2rem;
+	color: #000000;
+	padding-left: 2rem;
+	margin-bottom: 1.25rem;
 }
 
 img {
-  max-width: 100%; /* Se adapta al 100% del ancho del contenedor */
-  height: auto;    /* Mantiene la proporción */
-  display: block;
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 #discoveryButton {
-  background-color: #f5167e;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  transition: box-shadow 0.3s;
-  box-shadow:
-    0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 15px rgba(84, 13, 83, 0.7);
+	background-color: #f5167e;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 50px;
+	transition: box-shadow 0.3s;
+	box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(84, 13, 83, 0.7);
 }
 
 .homePage {
-  background-image: url("/img/home_dicovery.png");
-  background-size: cover;
-  background-position: center;
-  height: 65vh; /* Usa el 100% de la altura de la ventana */
-  width: 100vw;  /* Usa el 100% del ancho de la ventana */
+	background-image: url("/img/home_dicovery.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .homePage h1 {
-  color: #ba306a;
-  font-size: 4rem; /* Cambiado a rem para hacerlo más responsive */
+	color: #ba306a;
+	font-size: 4rem;
 }
 
 .homePage p {
-  color: white;
-  font-size: 2rem; /* Cambiado a rem */
+	color: white;
+	font-size: 2rem;
 }
 
-.title{
-  padding: 55px;
+.title {
+	font-family: Work Sans;
+  font-style: italic;
+  margin-top: 30vh;
+  padding-left: 40px;
+}
+.paragraph{
   font-family: Work Sans;
+  padding-left: 50px;
 }
