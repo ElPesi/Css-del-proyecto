@@ -32,6 +32,7 @@
 
 .popup input {
   color: white;
+  padding-left: 10px;
   min-height: 40px;
   min-width: 750px;
   background-color: transparent;
@@ -80,12 +81,25 @@ b {
   border: #ffffff 1px solid;
 }
 
+.google-login-button {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 70px;
+  height: 70px;
+  border: #A259FF 3px solid;
+}
+
 input:hover {
   transition: border-color 0.25s;
   border: #535bf2 1px solid;
 }
 
 .SignupButton:hover {
+  transition: border-color 0.25s;
+  border: #535bf2 3px solid;
+}
+
+.google-login-button:hover {
   transition: border-color 0.25s;
   border: #535bf2 3px solid;
 }

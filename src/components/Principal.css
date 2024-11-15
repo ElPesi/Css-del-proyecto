@@ -58,7 +58,7 @@ img {
 }
 
 .title {
-	font-family: Work Sans;
+	font-family: Space Mono;
   font-style: italic;
   margin-top: 30vh;
   padding-left: 40px;
@@ -66,4 +66,20 @@ img {
 .paragraph{
   font-family: Work Sans;
   padding-left: 50px;
+}
+
+.secondTitle{
+  font-family: Space Mono;
+  font-style: italic;
+  margin-top: 5vh;
+  padding-left: 40px;
+}
+
+.streamingGird{
+  display: flex;
+  padding-left: 30px;
+}
+
+.plataform{
+  padding: 10px;
 }
