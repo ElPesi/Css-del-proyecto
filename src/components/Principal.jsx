@@ -16,14 +16,15 @@ function HomePage() {
 				Welcome
 			</h1>
 			<p className="paragraph" style={{ fontSize: "25px" }}>
-				On this page you can search for movies and find the perfect
-				movie for the moment.
+				On this page, you can explore a wide range of movies and find the one that suits you best!
 			</p>
 
 			<h1 className="secondTitle" style={{ fontSize: "40px" }}>
 				Streaming Services
 			</h1>
-			<p className="paragraph" style={{ fontSize: "25px" }}>In this pages you can watch movies to legal form and payful</p>
+			<p className="paragraph" style={{ fontSize: "25px" }}>
+				Here, you can watch any movie you like by subscribing to a monthly plan.
+			</p>
 			<div className="streamingGird">
 				<a href="https://www.netflix.com/browse">
 					<div className="plataform">
@@ -56,12 +57,12 @@ function HomePage() {
 					<img src="/img/homePageTitle.png" alt="Home Page Title" />
 					<div className="leftSquare">
 						<center>
-							<h2>¿Don't know what movie to watch?</h2>
+							<h2>Don't know where to start?</h2>
 							<button
 								id="discoveryButton"
 								onClick={handleButtonClick}
 							>
-								Start Discovery
+								Start Discovery!
 							</button>
 						</center>
 					</div>
