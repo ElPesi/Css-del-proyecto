@@ -1,179 +1,267 @@
 ** {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
 
 body {
-	background-color: #2b2b2b;
-	color: #ddd;
+  background-color: #2b2b2b;
+  color: #ddd;
 }
 
 .page-container {
-	display: grid;
-	grid-template-rows: auto 1fr;
-	grid-template-columns: 1fr;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
 }
 
 .image-section {
+	background: linear-gradient(to left, #a259ff 50%, transparent);
 	width: 100%;
 	height: 60vh;
+	margin-top: 19.3rem;
 	overflow: hidden;
-}
-
-.header-image {
-	width: 100vw;
-	height: 100%;
+	display: flex;
+	align-items: center;
+	font-family: Oxanium;
+	padding: 20px;
+  }
+  
+  .poster-and-trailer {
+	display: flex;
+	justify-content: space-between; /* Mantiene elementos en extremos opuestos */
+	align-items: center;
+	width: 100%;
+  }
+  
+  .trailer-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #8a47e0;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-left: 20px; /* Espacio entre el texto y el botón */
+  }
+  
+  .trailer-button:hover {
+	background-color: #8e4dc2;
+  }
+  
+  .trailer-button:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+  }
+  
+  .trailer-button .loader {
+	border: 2px solid white;
+	border-top: 2px solid transparent;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	animation: spin 1s linear infinite;
+	margin-right: 10px;
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+  
+  
+  .header-image {
+	max-width: 40%; /* Imagen ocupa máximo 40% del ancho */
+	max-height: 300px; /* Controla la altura máxima */
+	height: auto;
+	border-radius: 8px;
 	object-fit: cover;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-}
+	margin-left: 20px; /* Espacio desde el borde derecho */
+  }
+  
 
 .content-section {
-	font-family: Oxanium;
-	display: grid;
-	grid-template-columns: 60% 35%;
-	grid-gap: 5%;
-	padding: 20px;
-	max-width: 1200px;
-	margin: auto;
+  font-family: Oxanium;
+  display: grid;
+  grid-template-columns: 60% 35%;
+  grid-gap: 5%;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .left-content {
-	width: 100%;
+  width: 100%;
 }
 
 h1 {
-	font-size: 2.5rem;
-	margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .release-date {
   font-family: Work Sans;
-	font-size: 1rem;
-	margin-bottom: 20px;
-	color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #aaa;
 }
 
 .author {
   font-family: Space Mono;
-	font-size: 1.2rem;
-	margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .author-name {
-	font-weight: bold;
-	color: #a259ff;
+  font-weight: bold;
+  color: #a259ff;
 }
 
 .description {
   font-family: Work Sans;
-	font-size: 1rem;
-	line-height: 1.6;
-	margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-.movieName{
+.movieName {
   font-family: Work Sans;
 }
 
 .extra-details {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .detail-title {
-	font-family: Space Mono;
-	font-weight: bold;
-	font-size: 1.1rem;
+  font-family: Space Mono;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .datailsStyle {
-	font-family: Work Sans;
-	font-weight: bold;
-	font-size: 1.1rem;
+  font-family: Work Sans;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .right-content {
-	text-align: right;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  text-align: right;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .duration-box {
   font-family: Space Mono;
-	background-color: #111;
-	padding: 20px;
-	border-radius: 8px;
-	margin-bottom: 20px;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .duration-box p {
-	margin-bottom: 10px;
-	font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
 .countdown {
   font-family: Space Mono;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	padding: 10px;
-	border: 1px solid #111;
-	border-radius: 8px;
-	background-color: #111;
-	width: fit-content;
-	margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #111;
+  border-radius: 8px;
+  background-color: #111;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .countdown span {
-	font-size: 1.5rem;
-	font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .countdown p {
-	font-size: 0.9rem;
-	margin: 0;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .discover-button {
-	font-family: Work Sans;
-	background-color: #8e4dc2;
-	color: white;
-	border: none;
-	padding: 15px 30px;
-	font-size: 1.2rem;
-	border-radius: 8px;
-	cursor: pointer;
-	transition: background-color 0.3s;
+  font-family: Work Sans;
+  background-color: #8e4dc2;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .discover-button:hover {
-	background-color: #a259ff;
+  background-color: #a259ff;
 }
 
 .right-content {
-	text-align: center;
-	margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 h1 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 .description {
-	font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .discover-button {
-	width: 100%;
+  width: 100%;
 }
+
 .inline-image {
-	vertical-align: middle; /* Alinea la imagen con el centro del texto */
-	display: inline-block; /* Asegura que la imagen permanezca en la misma línea */
-  }
-  
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #2b2b2b;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #8e4dc2;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #a259ff;
+}

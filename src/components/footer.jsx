@@ -19,6 +19,7 @@ function Footer() {
                         setMovie(res.data);
                         setError(null);
                         navigate('/Descripcion', { state: { movie: res.data } });
+                        setTitle("")
                     } else {
                         setMovie(null);
                         setError('Movie not found. Try another title.');
